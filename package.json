@@ -1,0 +1,24 @@
+{
+  "name": "mm-207",
+  "version": "1.0.0",
+  "description": "Homework solution for MM-207 class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kholoudadel/MM-207.git"
+  },
+  "keywords": [],
+  "author": "Kholoud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kholoudadel/MM-207/issues"
+  },
+  "homepage": "https://github.com/kholoudadel/MM-207#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

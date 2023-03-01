@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static resource</title>
+</head>
+<body>
+
+
+    <select id="langauge">
+        <option value="no">norsk</option>
+        <option value="en">engelsk</option>
+
+    </select>
+        <button onclick="changeLanguage()">Try it</button>
+            
+
+    <script>
+        // 1. når brukeren velger språk. gjor et kall til server for å få ny vits
+        // 2. Når du får en vits show it in jokeView.
+
+        async function changeLanguage(){
+            const selector = document.getElementById("langauge");
+            console.log(selector.value);
+            //(http://localhost:8080/joke/:lang
+            let joke = await fetch("/joke/" + selector.value);
+            joke = await joke.text();
+
+            document.getElementById("jokeView").innerText = joke;
+        }
+
+
+
+        </script>
+
+
+    <h1>This is a static resource</h1>
+    <p id="jokeView">
+        
+    </p>
+    <img src="cool.jpg" alt="random image created by an AI">
+</body>
+</html>
